@@ -13,31 +13,27 @@ variable "common_tags" {
         Environment = "dev"
     }
 }
-
-variable "mysql_sg_tags" {
+variable "mysql_tags" {
     default = {
-        component = "mysql"
+        Component = "mysql"
+    }
+}
+variable "backend_tags" {
+    default = {
+        Component = "backend"
+    }
+}
+variable "frontend_tags" {
+    default = {
+        Component = "frontend"
+    }
+}
+variable "ansible_tags" {
+    default = {
+        Component = "ansible"
     }
 }
 
-variable "backend_sg_tags" {
-    default = {
-        component = "backend"
-    }
-}
-
-variable "frontend_sg_tags" {
-    default = {
-        component = "frontend"
-    }
-}
-variable "bastion_sg_tags" {
-    default = {
-        component = "bastion"
-    }
-}
-variable "ansible_sg_tags" {
-    default = {
-        component = "ansible"
-    }
+variable "zone_name" {
+    default = "nikhilvaranasi.online"
 }
